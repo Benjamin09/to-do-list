@@ -10,3 +10,7 @@
 .taskClick:hover {
   text-decoration: underline;
 }
+
+.removeButton {
+  margin-left: 15px;
+}

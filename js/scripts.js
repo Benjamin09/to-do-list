@@ -14,9 +14,9 @@ $(document).ready(function(){
     var details = $('#details').val();
     var newTask = new Task(taskTitle, startTime, endTime, details);
 
-    $('#taskList').append("<li><span class ='taskClick'>"+ newTask.taskTitle +"</span></li>");
+    $('#taskList').append("<li><span class ='taskClick'>"+ newTask.taskTitle +"</span><span class='removeButton glyphicon glyphicon-remove'></span></li>");
 
-    $('.taskClick').click(function() {
+    $('.taskClick').last().click(function() {
       $('#taskDetails').show();
       $('.taskTitle').text(newTask.taskTitle);
       $('.startTime').text(newTask.startTime);
@@ -24,6 +24,8 @@ $(document).ready(function(){
       $('.details').text(newTask.details);
     });
 
-
+    $('.removeButton').last().click(function(){
+      $(this).parent().remove();
+    });
   });
 });
