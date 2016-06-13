@@ -1,0 +1,12 @@
+#taskDetails {
+  display: none;
+}
+
+.taskClick {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.taskClick:hover {
+  text-decoration: underline;
+}
